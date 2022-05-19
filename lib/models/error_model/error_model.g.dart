@@ -8,7 +8,7 @@ part of 'error_model.dart';
 
 _$_ErrorModel _$$_ErrorModelFromJson(Map<String, dynamic> json) =>
     _$_ErrorModel(
-      message: json['message'] as String? ?? Strings.signupWriteup,
+      message: json['message'] as String? ?? Strings.defaultErrorMessage,
       code: json['code'] as int? ?? 1,
       errors: json['errors'] == null
           ? null

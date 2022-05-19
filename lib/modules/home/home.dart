@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/core/extensions/index.dart';
 import 'package:portfolio/modules/home/widgets/home_mobile.dart';
 import 'package:portfolio/modules/home/widgets/home_tablet.dart';
 import 'package:portfolio/router/app_route.dart';
@@ -11,10 +12,13 @@ class Home extends StatelessWidget implements AppRoute {
 
   @override
   Widget build(BuildContext context) {
-    return const ResponsiveBuilder(
-        desktop: HomeDesktop(),
-        mobile: HomeMobile(),
-        largeTablet: HomeTablet());
+    return Material(
+      color: context.backgroundColor,
+      child: const ResponsiveBuilder(
+          desktop: HomeDesktop(),
+          mobile: HomeMobile(),
+          largeTablet: HomeTablet()),
+    );
   }
 
   @override

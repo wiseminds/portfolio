@@ -14,8 +14,11 @@ class AppTitle extends StatelessWidget {
               color:
                   hasDarkBackground ? Colors.white : const Color(0xff4F4F4F))),
       TextSpan(
-          text: 'PorplePages',
-          style: context.titleSmall?.copyWith(color: context.primaryColor))
+          text: 'Wisdom Ekeh',
+          style: context.headline5?.copyWith(
+              fontSize: 20,
+              fontStyle: FontStyle.italic,
+              fontWeight: FontWeight.w400))
     ]));
   }
 }

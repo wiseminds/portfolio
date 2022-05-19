@@ -12,7 +12,13 @@ class SiteLogo extends StatelessWidget {
     return InkWell(
         onTap: () => Navigator.pushNamed(context, '/'),
         child: Row(
-          children: [const Logo(), 8.0.w, const AppTitle()],
+          // crossAxisAlignment: CrossAxisAlignment.end,
+          children: [
+            SizedBox.fromSize(
+                size: const Size.fromRadius(30), child: const Logo()),
+            8.0.w,
+            const AppTitle()
+          ],
         ));
   }
 }

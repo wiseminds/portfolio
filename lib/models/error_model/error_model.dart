@@ -10,7 +10,7 @@ part 'error_model.g.dart';
 @freezed
 class ErrorModel extends ApiError with _$ErrorModel {
   factory ErrorModel({
-    @Default(Strings.signupWriteup) String message,
+    @Default(Strings.defaultErrorMessage) String message,
     @Default(1) int code,
     Errors? errors,
   }) = _ErrorModel;

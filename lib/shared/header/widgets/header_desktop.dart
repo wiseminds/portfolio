@@ -1,10 +1,11 @@
 import 'package:portfolio/core/extensions/index.dart';
-import 'package:portfolio/gen/assets.gen.dart'; 
+import 'package:portfolio/gen/assets.gen.dart';
 import 'package:portfolio/shared/responsive/widgets/responsive_builder.dart';
 import 'package:flutter/material.dart';
 
 import 'menu_button.dart';
 import 'search_bar.dart';
+import 'site_logo.dart';
 
 class HeaderDesktop extends StatelessWidget {
   const HeaderDesktop({Key? key}) : super(key: key);
@@ -17,24 +18,8 @@ class HeaderDesktop extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
-            // const SiteLogo(),
-            // 122.0.w,
-            // const NavMenuHorizontal(),
-            20.0.w,
-            // ResponsiveBuilder(
-            //     tablet: SizedBox.square(
-            //         dimension: 18,
-            //         child: Center(child: Assets.svg.search.svg())),
-            //     desktop: const SizedBox(
-            //         width: 300,
-            //         child: SearchBar(
-            //           hintText: 'Search company here',
-            //         ))),
-            62.0.w,
-            const ResponsiveBuilder(desktop: SizedBox(), tablet: MenuButton()),
-            // const LoginButton(),
-            // 10.0.w,
-            // const SignupButton()
+            const SiteLogo(),
+            .0.s,
           ],
         ),
       ),

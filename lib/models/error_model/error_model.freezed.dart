@@ -132,7 +132,7 @@ class __$$_ErrorModelCopyWithImpl<$Res> extends _$ErrorModelCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ErrorModel implements _ErrorModel {
   _$_ErrorModel(
-      {this.message = Strings.signupWriteup, this.code = 1, this.errors});
+      {this.message = Strings.defaultErrorMessage, this.code = 1, this.errors});
 
   factory _$_ErrorModel.fromJson(Map<String, dynamic> json) =>
       _$$_ErrorModelFromJson(json);
