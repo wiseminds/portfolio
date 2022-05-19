@@ -5,30 +5,33 @@ on:
   pull_request:
     branches: [master]
   workflow_dispatch:
-    
 
 jobs:
-      build:
-        runs-on: ubuntu-latest
-        steps:
-        - uses: actions/checkout@v2
-        - uses: subosito/flutter-action@v1
-          with:
-            channel: stable
-        # - run: flutter test  
-        - run: flutter build web
-        # - run: flutter build ios
-        - name: Deploy to Netlify
-          uses: nwtgck/actions-netlify@v1.1
-          with:
-            publish-dir: './build/web'
-            production-branch: master
-            # github-token: ${{ secrets.MY_GITHUB_SECRET }}
-            deploy-message: "Deploy from GitHub Actions"
-            enable-pull-request-comment: false
-            enable-commit-comment: true
-            overwrites-pull-request-comment: true
-          env:
-            NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-            NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
-          timeout-minutes: 1     
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3 
+      - uses: subosito/flutter-action@v1
+        with:
+          channel: stable
+
+
+      # - name: Go to example folder
+      #   run: cd example             
+
+      - name: Install dependencies
+        run: cd example && flutter build web
+
+      - name: Analyze project source
+        run: flutter analyze
+
+      # - name: Run tests
+      #   run: dart test   
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./example/build/web 
+  
