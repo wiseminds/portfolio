@@ -23,8 +23,8 @@ jobs:
       - name: Install dependencies
         run: flutter build web
 
-      - name: Analyze project source
-        run: flutter analyze
+      # - name: Analyze project source
+      #   run: flutter analyze
 
       # - name: Run tests
       #   run: dart test   
