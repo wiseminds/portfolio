@@ -32,6 +32,5 @@ class DependencyInjection {
   /// registers global providers
   static Widget providers(Widget child) => MultiProvider(providers: [
         ChangeNotifierProvider(create: (_) => ResponsiveSettingsProvider()),
-       
       ], child: child);
 }

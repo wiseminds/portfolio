@@ -1,4 +1,3 @@
-
 import 'responsive_types.dart';
 
 class ResponsiveValue<T> {

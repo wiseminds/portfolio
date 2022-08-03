@@ -14,7 +14,7 @@ class AppScaffold extends StatelessWidget {
     return Row(children: [
       const ResponsiveBuilder(
         desktop: SizedBox(),
-        tablet: SizedBox(), 
+        tablet: SizedBox(),
       ),
       Container(
           width: 1,
@@ -24,7 +24,7 @@ class AppScaffold extends StatelessWidget {
         child: Scaffold(
             drawer: const ResponsiveBuilder(
               desktop: SizedBox(),
-              tablet: SizedBox(), 
+              tablet: SizedBox(),
             ),
             backgroundColor: context.canvasColor,
             appBar: PreferredSize(

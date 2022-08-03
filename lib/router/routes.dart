@@ -7,8 +7,5 @@ import 'app_route.dart';
 class Routes {
   static AppRoute four04 = const Four04();
 
-  static List<AppRoute> all = [
-   
-  ];
- 
+  static List<AppRoute> all = [];
 }
